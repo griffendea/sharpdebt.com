@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finance Freedom Family – Debt Relief</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,900;1,9..144,700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --red:       #af2129;
+  --red-dark:  #8e1a20;
+  --red-faint: #fdf2f1;
+  --red-mid:   #f5c4bf;
+  --green:     #1a6e3c;
+  --green-faint: #eef7f2;
+  --green-mid: #a8d9bc;
+  --amber:     #7a4f00;
+  --amber-faint: #fff7dd;
+  --amber-mid: #f5d800;
+  --ink:       #111111;
+  --ink-2:     #2c2c2c;
+  --ink-3:     #585858;
+  --ink-4:     #959595;
+  --surface:   #f5f4f0;
+  --white:     #f9f9f6;
+  --rule:      #e2e0db;
+  --dark:      #111111;
+  --max:       780px;
+  --f-display: 'Fraunces', Georgia, serif;
+  --f-body:    'Inter', system-ui, sans-serif;
+  --f-article: 'Times New Roman', Times, serif;
+  --f-headline: 'Playfair Display', Georgia, serif;
+}
+
+html { font-size: 22px; scroll-behavior: smooth; }
+body {
+  font-family: var(--f-body);
+  background: var(--white);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 60px;
+}
+
+/* ─────────────────────────────────────
+   ALERT BAR
+───────────────────────────────────── */
+.alert-bar {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 11px 20px;
+  font-family: var(--f-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+.alert-bar strong { color: #f5c518; }
+
+/* ─────────────────────────────────────
+   MASTHEAD
+───────────────────────────────────── */
+.masthead {
+  padding: 20px 24px 16px;
+  text-align: center;
+  border-bottom: 2px solid var(--ink);
+}
+.site-name {
+  font-family: var(--f-display);
+  font-size: clamp(28px, 7vw, 44px);
+  font-weight: 900;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+}
+.site-tagline {
+  font-family: var(--f-body);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-top: 7px;
+}
+.site-tagline span { margin: 0 7px; opacity: 0.35; }
+
+/* ─────────────────────────────────────
+   ARTICLE SHELL
+───────────────────────────────────── */
+.article {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ─────────────────────────────────────
+   META ROW
+───────────────────────────────────── */
+.meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  padding: 16px 0 14px;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--f-body);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.badge {
+  background: var(--red);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 3px;
+}
+.meta-dot { color: var(--rule); }
+
+/* ─────────────────────────────────────
+   HEADLINE
+───────────────────────────────────── */
+h1 {
+  font-family: var(--f-article);
+  font-size: clamp(34px, 7vw, 48px);
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 22px 0 18px;
+  -webkit-text-stroke: 0.5px var(--ink);
+}
+h1 em {
+  font-style: italic;
+  color: var(--red);
+  -webkit-text-stroke: 0.5px var(--red);
+}
+
+/* ─────────────────────────────────────
+   DECK
+───────────────────────────────────── */
+.deck {
+  font-family: var(--f-article);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.52;
+  color: var(--ink);
+  margin-bottom: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ─────────────────────────────────────
+   HERO IMAGE
+───────────────────────────────────── */
+.hero {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  margin-bottom: 10px;
+}
+.hero img { display: block; width: 100%; height: auto; }
+.caption {
+  font-family: var(--f-body);
+  font-size: 12px;
+  color: var(--ink-4);
+  font-style: italic;
+  margin-bottom: 6px;
+}
+
+/* ─────────────────────────────────────
+   CALLOUT BOXES
+───────────────────────────────────── */
+.callout {
+  background: var(--amber-faint);
+  border: 1.5px solid var(--amber-mid);
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin: 28px 0;
+}
+.callout-label {
+  font-family: var(--f-body);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #e2bd67;
+  margin-bottom: 9px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.callout p {
+  font-family: var(--f-article);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.52;
+  color: var(--ink);
+}
+
+/* ─────────────────────────────────────
+   BODY PARAGRAPHS
+───────────────────────────────────── */
+.body-p {
+  font-family: var(--f-article);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 22px;
+}
+
+/* ─────────────────────────────────────
+   DROP CAP
+───────────────────────────────────── */
+.drop::first-letter {
+  font-family: var(--f-article);
+  font-size: 86px;
+  font-weight: 700;
+  float: left;
+  line-height: 0.72;
+  margin: 10px 10px 0 0;
+  color: var(--red);
+  padding-top: 5px;
+}
+
+/* ─────────────────────────────────────
+   PULLQUOTE
+───────────────────────────────────── */
+.pullquote {
+  margin: 32px 0;
+  padding: 26px 24px;
+  background: var(--surface);
+  border-radius: 10px;
+  border-left: 5px solid var(--red);
+}
+.pullquote p {
+  font-family: var(--f-article);
+  font-style: italic;
+  font-size: clamp(20px, 4.5vw, 26px);
+  font-weight: 700;
+  line-height: 1.45;
+  color: var(--ink);
+}
+
+/* ─────────────────────────────────────
+   RED INLINE LINK
+───────────────────────────────────── */
+a.rl {
+  color: var(--red);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+/* ─────────────────────────────────────
+   CTA BUTTON
+───────────────────────────────────── */
+.cta {
+  display: block;
+  width: 100%;
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 20px 10px 18px;
+  border-radius: 8px;
+  font-family: var(--f-body);
+  font-size: clamp(15px, 4vw, 22px);
+  font-weight: 800;
+  line-height: 1.25;
+  border: none;
+  cursor: pointer;
+  transition: background .15s, transform .1s, box-shadow .15s;
+  box-shadow: 0 4px 18px rgba(192,40,26,0.32);
+  margin-top: 22px;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.cta:hover {
+  background: var(--red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 7px 24px rgba(192,40,26,0.38);
+}
+.cta .sub {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  margin-top: 4px;
+  opacity: 0.88;
+  letter-spacing: 0;
+  white-space: normal;
+}
+
+/* ─────────────────────────────────────
+   TRUST BADGES
+───────────────────────────────────── */
+.trust-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--ink-3);
+  margin: 12px 0 28px;
+}
+.trust-row span::before { content: '✓ '; color: var(--green); font-weight: 700; }
+
+/* ─────────────────────────────────────
+   STATS BAR
+───────────────────────────────────── */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid var(--ink);
+  margin-bottom: 48px;
+}
+.stat {
+  text-align: center;
+  padding: 26px 10px;
+  background: var(--white);
+  border-right: 2px solid var(--ink);
+}
+.stat:last-child { border-right: none; }
+.stat-n {
+  display: block;
+  font-family: var(--f-article);
+  font-size: clamp(28px, 5vw, 38px);
+  font-weight: 700;
+  -webkit-text-stroke: 0.4px var(--red);
+  color: var(--red);
+  line-height: 1.0;
+  letter-spacing: -0.02em;
+  margin-bottom: 2px;
+}
+.stat-l {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: 8px;
+}
+
+/* ═════════════════════════════════════
+   DARK SECTION
+═════════════════════════════════════*/
+.dark {
+  background: #141414;
+  padding: 52px 20px 56px;
+}
+.dark .inner { max-width: var(--max); margin: 0 auto; }
+
+.dark-h2 {
+  font-family: var(--f-display);
+  font-size: clamp(30px, 6vw, 40px);
+  font-weight: 900;
+  text-align: center;
+  color: #fff;
+  letter-spacing: -0.03em;
+  line-height: 1.18;
+  margin-bottom: 8px;
+}
+.dark-sub {
+  text-align: center;
+  font-family: var(--f-body);
+  font-size: 16px;
+  font-weight: 400;
+  color: #777;
+  margin-bottom: 28px;
+  line-height: 1.5;
+}
+.dark-sub strong { color: #f0c040; font-weight: 700; }
+
+/* SLIDER CARD */
+.s-card {
+  background: var(--white);
+  padding: 26px;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 28px rgba(0,0,0,0.28);
+}
+.s-lbl {
+  font-family: var(--f-body);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 10px;
+}
+.s-amt {
+  font-family: var(--f-body);
+  font-size: clamp(44px, 10vw, 58px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+  color: var(--red);
+  line-height: 1.0;
+  margin-bottom: 6px;
+}
+.s-save {
+  font-family: var(--f-body);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--green);
+  margin-bottom: 18px;
+}
+.s-save::before { content: '↓ '; }
+
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+  cursor: pointer;
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--f-body);
+  font-size: 12px;
+  color: #aaa;
+  font-weight: 500;
+}
+
+.dark .cta { margin-top: 8px; font-size: 22px; }
+
+.dark-trust {
+  font-family: var(--f-body);
+  font-size: 12.5px;
+  color: #666;
+  text-align: center;
+  margin: 10px 0 26px;
+}
+.dark-trust span { margin: 0 5px; }
+.dark-trust span::before { content: '• '; color: #444; }
+.dark-trust span:first-child::before { content: ''; }
+
+/* STEPS */
+.steps { margin: 28px 0 22px; }
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #242424;
+  margin-bottom: 24px;
+}
+.step:last-child { border-bottom: none; padding-bottom: 0; margin-bottom: 0; }
+.step-n {
+  min-width: 38px; height: 38px;
+  border-radius: 50%;
+  background: #b8860b;
+  color: #fff;
+  font-family: var(--f-body);
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.step-t h4 {
+  font-family: var(--f-body);
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 5px;
+  line-height: 1.3;
+}
+.step-t p {
+  font-family: var(--f-body);
+  font-size: 16px;
+  color: #888;
+  line-height: 1.50;
+}
+
+.more-bar {
+  background: #162e14;
+  border: 1px solid #27562a;
+  color: #7ecb8f;
+  font-family: var(--f-body);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 15px 18px;
+  border-radius: 8px;
+  text-align: center;
+  margin: 22px 0 10px;
+  line-height: 1.5;
+}
+
+/* ═════════════════════════════════════
+   SURFACE SECTION
+═════════════════════════════════════*/
+.surface {
+  background: var(--surface);
+  padding: 52px 20px 56px;
+}
+.surface .inner { max-width: var(--max); margin: 0 auto; }
+
+/* TRUST BOX */
+.trust-box {
+  background: #f2efe7;
+  border: 1.5px solid var(--rule);
+  border-radius: 10px;
+  padding: 28px 24px;
+  margin-bottom: 36px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.trust-box h2 {
+  font-family: var(--f-article);
+  font-size: clamp(24px, 5vw, 30px);
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px #000;
+  color: #000;
+  margin-bottom: 14px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+.trust-box > p {
+  font-family: var(--f-article);
+  font-size: 22px;
+  line-height: 1.54;
+  color: #000;
+}
+.trust-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 20px;
+}
+.tc {
+  border: 1.5px solid var(--rule);
+  border-radius: 8px;
+  background: var(--surface);
+  padding: 20px 14px;
+  text-align: center;
+}
+.tc .icon { font-size: 26px; display: block; margin-bottom: 10px; }
+.tc h4 {
+  font-family: var(--f-body);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.tc p {
+  font-family: var(--f-body);
+  font-size: 12px;
+  color: var(--ink-4);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* WHY SECTION */
+.why-h2 {
+  font-family: var(--f-article);
+  font-size: clamp(32px, 6vw, 42px);
+  font-weight: 700;
+  -webkit-text-stroke: 0.5px var(--ink);
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin: 0 0 16px;
+  line-height: 1.18;
+}
+.body-surface {
+  font-family: var(--f-article);
+  font-size: 22px;
+  line-height: 1.55;
+  color: var(--ink);
+  margin-bottom: 22px;
+}/* CASE CARDS */
+.case-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 22px 0 26px;
+}
+.case {
+  padding: 20px 18px;
+  border-radius: 8px;
+}
+.case.worst {
+  background: var(--red-faint);
+  border: 1.5px solid var(--red-mid);
+}
+.case.best {
+  background: var(--green-faint);
+  border: 1.5px solid var(--green-mid);
+}
+.case-lbl {
+  font-family: var(--f-body);
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  color: var(--red);
+  margin-bottom: 10px;
+}
+.case.best .case-lbl { color: var(--green); }
+.case p {
+  font-family: var(--f-article);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--ink);
+  margin: 0;
+}
+
+/* RESULT QUOTE */
+.result-quote {
+  border-top: 3px solid var(--ink);
+  border-bottom: 3px solid var(--ink);
+  padding: 28px 16px;
+  margin: 28px 0;
+  text-align: center;
+}
+.result-quote .rq-marks {
+  font-family: var(--f-display);
+  font-size: 48px;
+  font-weight: 900;
+  color: var(--red);
+  line-height: 0.8;
+  display: block;
+  margin-bottom: 14px;
+  letter-spacing: 6px;
+}
+.result-quote p {
+  font-family: var(--f-article);
+  font-size: clamp(24px, 4vw, 28px);
+  font-weight: 700;
+  line-height: 1.50;
+  color: var(--ink);
+}
+
+/* ─────────────────────────────────────
+   FOOTER
+───────────────────────────────────── */
+footer {
+  background: var(--dark);
+  color: #555;
+  text-align: center;
+  padding: 26px 20px;
+  font-family: var(--f-body);
+  font-size: 11.5px;
+  line-height: 1.9;
+}
+footer a { color: #777; text-decoration: underline; }
+footer em { font-style: italic; font-size: 11px; }
+
+/* ─────────────────────────────────────
+   STICKY BAR
+───────────────────────────────────── */
+.sticky {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  z-index: 100;
+  background: var(--red);
+  border: 4px solid #000;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+}
+.sticky a {
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 16px 20px;
+  font-family: var(--f-body);
+  font-size: 17px;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: -0.01em;
+}
+.sticky a:hover { background: var(--red-dark); }
+
+@media (max-width: 420px) {
+  .case-grid { grid-template-columns: 1fr; }
+  .trust-row { flex-wrap: wrap; gap: 8px; justify-content: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- ALERT BAR -->
+<div class="alert-bar">
+  <strong>Financial Alert:</strong>&ensp;Government-Regulated Debt Relief Program — 2026
+</div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="site-name">Finance Freedom Family</div>
+  <div class="site-tagline">Personal Finance <span>·</span> Debt <span>·</span> Retirement</div>
+</header>
+
+<!-- ──────────── ARTICLE ──────────── -->
+<main class="article">
+
+  <div class="meta">
+    <span class="badge">Debt Relief</span>
+    <span>Finance Freedom Team</span>
+    <span class="meta-dot">·</span>
+    <span>10.14.25</span>
+    <span class="meta-dot">·</span>
+    <span>2 min read</span>
+  </div>
+
+  <h1>If You Owe $20,000+, This Government-Regulated Program Could Eliminate <em>Up To 80%</em> of What You Owe — Without Bankruptcy or Loans</h1>
+
+  <p class="deck">A little-known debt resolution program is helping Americans over 50 legally erase tens of thousands of dollars in credit card debt. Here's how it works — and how to check if you qualify in 60 seconds.</p>
+
+  <div class="hero">
+    <img src="https://raw.githubusercontent.com/griffendea/landers/refs/heads/main/past-due.png" alt="Past due bill">
+  </div>
+  <p class="caption">Financial advisor consulting with client about debt relief options.</p>
+
+  <div class="callout">
+    <div class="callout-label">⚠&ensp;Warning</div>
+    <p>Credit card companies are <strong>TERRIFIED</strong> you'll discover this legal loophole they can't stop you from using…</p>
+  </div>
+
+  <p class="body-p drop">Right now, <strong>as you read this</strong>, thousands of Americans over 50 are using a little-known debt relief program to legally eliminate 40-80% of their credit card debt — <strong>without filing bankruptcy, taking out loans, or damaging their credit further.</strong></p>
+
+  <p class="body-p">Here's what the credit card companies don't want you to know: <strong>They would rather settle your debt for pennies on the dollar than risk getting nothing at all.</strong> And this government-regulated program forces them to negotiate.</p>
+
+  <div class="pullquote">
+    <p>One client eliminated $87,000 in credit card debt and paid just $24,000.</p>
+  </div>
+
+  <p class="body-p">The results are shocking: People with $25,000 in debt are walking away paying just $8,000. Those with $50,000+ in debt are saving over $30,000.</p>
+
+  <p class="body-p">Imagine what you could do with that money back in your pocket: <strong>Finally retire comfortably. Take that dream vacation. Help your grandchildren. Stop the endless cycle of minimum payments that go nowhere.</strong> With interest rates at all-time highs (some over 29%!), every month you wait costs you hundreds more. But <a href="https://path.godebthelp.com/click" class="rl">checking if you qualify takes 2 minutes and costs absolutely nothing.</a></p>
+
+  <div class="callout">
+    <div class="callout-label">⏱&ensp;Time-Sensitive</div>
+    <p>This program has income and debt amount requirements. If you have <strong>$20,000 or more</strong> in unsecured debt (credit cards, personal loans, medical bills), you need to check your eligibility before these spots fill up. This program could get pulled at any time.</p>
+  </div>
+
+  <p class="body-p"><strong>URGENT — READ THIS:</strong> Skeptical? We understand. Most people with $40,000+ in debt think this sounds "too good to be true." But here's the reality: <strong>Over 1 million Americans have already used this program to eliminate $19+ BILLION in debt since 2002.</strong> This isn't magic — it's a legal negotiation process backed by the American Association for Debt Resolution. Your creditors would rather get some money than none. And there's <strong>ZERO COST to check</strong> and <strong>ZERO RISK</strong> to <a href="https://path.godebthelp.com/click" class="rl">see if you qualify in the next 60 seconds.</a> What do you have to lose besides your debt?</p>
+
+  <a href="https://path.godebthelp.com/click" class="cta">YES! Show Me How Much I Can Save
+    <span class="sub">Free 60-Second Check →</span>
+  </a>
+
+  <div class="trust-row">
+    <span>Free</span><span>No Signup</span><span>Confidential</span>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><span class="stat-n">$19B+</span><span class="stat-l">Debt Resolved</span></div>
+    <div class="stat"><span class="stat-n">1M+</span><span class="stat-l">Clients Served</span></div>
+    <div class="stat"><span class="stat-n">A+</span><span class="stat-l">BBB Rated</span></div>
+  </div>
+
+</main>
+
+<!-- ──────────── DARK: 3 STEPS ──────────── -->
+<section class="dark">
+  <div class="inner">
+    <h2 class="dark-h2">3 Simple Steps To Eliminate Your Debt</h2>
+    <p class="dark-sub">Takes Under 5 Minutes &nbsp;·&nbsp; <strong>Over 1,000 people checked their eligibility TODAY</strong></p>
+
+    <div class="s-card">
+      <div class="s-lbl">Step 1: Select Your Debt Amount</div>
+      <div class="s-amt" id="amt1">$25,000</div>
+      <div class="s-save" id="save1">Estimated savings: $15,000</div>
+      <input type="range" id="sl1" min="10000" max="100000" step="1000" value="25000">
+      <div class="range-labels"><span>$10,000</span><span>$100,000+</span></div>
+    </div>
+
+    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:6px;">Check Your Eligibility — It's Free!
+      <span class="sub">Free &nbsp;•&nbsp; No Signup Required &nbsp;•&nbsp; Confidential &nbsp;•&nbsp; Your Creditors Won't Be Notified</span>
+    </a>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-t"><h4>Select Your Debt Amount (Above)</h4><p>Use the slider to show how much unsecured debt you're carrying. Takes 5 seconds.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-t"><h4>Get Your FREE Savings Estimate</h4><p>Answer a few quick questions. See exactly how much debt you could eliminate. No credit card required, no hidden fees.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-t"><h4>Talk to a Certified Debt Specialist</h4><p>A friendly expert will review your options, answer your questions, and create your personalized debt elimination plan. No pressure, no obligation.</p></div>
+      </div>
+    </div>
+
+    <div class="more-bar">💰 The MORE debt you have, the MORE you can eliminate — even $50,000–$100,000+!</div>
+
+    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:10px;">YES! Show Me How Much I Can Save
+      <span class="sub">Free 60-Second Check →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ──────────── SURFACE: TRUST ──────────── -->
+<section class="surface">
+  <div class="inner">
+
+    <div class="trust-box">
+      <h2>"Is This Really Legal? Can I Trust This?"</h2>
+      <p><strong>100% YES — And Here's The Proof:</strong> This program has an <strong>"A+" BBB rating</strong> and <strong>4.5/5 stars on TrustPilot</strong> from thousands of real clients. Since 2002, it has legally eliminated over <strong>$19 BILLION in debt</strong> for over <strong>1 MILLION Americans</strong> just like you. It's fully accredited by the American Association for Debt Resolution (AADR) and operates under strict government regulations. This isn't a scam — it's a proven legal process that banks hate because it costs them billions.</p>
+      <div class="trust-grid">
+        <div class="tc"><span class="icon">🏆</span><h4>BBB A+ Rating</h4><p>Better Business Bureau accredited</p></div>
+        <div class="tc"><span class="icon">⭐</span><h4>4.5/5 TrustPilot</h4><p>Thousands of verified reviews</p></div>
+        <div class="tc"><span class="icon">💵</span><h4>$19 Billion Resolved</h4><p>Since 2002</p></div>
+        <div class="tc"><span class="icon">👥</span><h4>1M+ Clients Served</h4><p>Trusted by millions</p></div>
+      </div>
+    </div>
+
+    <h2 class="why-h2">Why Are You Still Carrying This Debt?</h2>
+
+    <p class="body-surface">Listen: Checking your eligibility is <strong>100% FREE, completely CONFIDENTIAL, and carries ZERO RISK</strong>. Your creditors will never know you checked. No credit card needed. No obligation whatsoever.</p>
+
+    <div class="case-grid">
+      <div class="case worst">
+        <div class="case-lbl">Worst Case</div>
+        <p>You don't qualify, and you lose nothing.</p>
+      </div>
+      <div class="case best">
+        <div class="case-lbl">Best Case</div>
+        <p>You qualify and begin to resolve your debt.</p>
+      </div>
+    </div>
+
+    <p class="body-surface">Close your eyes and imagine: No more anxiety when the phone rings. No more sleepless nights. No more fighting with your spouse about money. Just peace of mind and financial freedom.</p>
+
+    <div class="result-quote">
+      <p>Real Results: The average client eliminates 50-70% of their debt. Someone with $40,000 in credit cards could walk away paying just $14,000. That's $26,000 SAVED!</p>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">⚠&ensp;Warning</div>
+      <p>Every day you wait, you're throwing money away on interest. Banks are making thousands off you while you struggle. Stop letting them win. Take back control TODAY.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ──────────── FINAL DARK CTA ──────────── -->
+<section class="dark">
+  <div class="inner">
+    <h2 class="dark-h2">3 Simple Steps To Eliminate Your Debt</h2>
+    <p class="dark-sub">Takes Under 5 Minutes &nbsp;·&nbsp; <strong>Over 1,000 people checked their eligibility TODAY</strong></p>
+
+    <div class="s-card">
+      <div class="s-lbl">Step 1: Select Your Debt Amount</div>
+      <div class="s-amt" id="amt2">$25,000</div>
+      <div class="s-save" id="save2">Estimated savings: $15,000</div>
+      <input type="range" id="sl2" min="10000" max="100000" step="1000" value="25000">
+      <div class="range-labels"><span>$10,000</span><span>$100,000+</span></div>
+    </div>
+
+    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:6px;">Check Your Eligibility — It's Free!
+      <span class="sub">Free &nbsp;•&nbsp; No Signup Required &nbsp;•&nbsp; Confidential &nbsp;•&nbsp; Your Creditors Won't Be Notified</span>
+    </a>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-n">1</div>
+        <div class="step-t"><h4>Select Your Debt Amount (Above)</h4><p>Use the slider to show how much unsecured debt you're carrying. Takes 5 seconds.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">2</div>
+        <div class="step-t"><h4>Get Your FREE Savings Estimate</h4><p>Answer a few quick questions. See exactly how much debt you could eliminate. No credit card required, no hidden fees.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-n">3</div>
+        <div class="step-t"><h4>Talk to a Certified Debt Specialist</h4><p>A friendly expert will review your options, answer your questions, and create your personalized debt elimination plan. No pressure, no obligation.</p></div>
+      </div>
+    </div>
+
+    <div class="more-bar">💰 The MORE debt you have, the MORE you can eliminate — even $50,000–$100,000+!</div>
+
+    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:10px;">YES! Show Me How Much I Can Save
+      <span class="sub">Free 60-Second Check →</span>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><em>*Statistics reflect the results of the members Freedom Debt Relief and its affiliates have served since 2002 (as of April 2024).</em></p>
+  <p style="margin-top:8px;"><a href="#">Terms</a> &nbsp;|&nbsp; <a href="#">Privacy Policy</a></p>
+  <p style="margin-top:6px;">Copyright © 2026 — All rights reserved Finance Freedom Family</p>
+</footer>
+
+<!-- STICKY BAR -->
+<div class="sticky">
+  <a href="https://path.godebthelp.com/click">See How Much You Could Save (60 sec) →</a>
+</div>
+
+<script>
+(function(){
+  function fmt(v){ return '$'+v.toLocaleString('en-US'); }
+  function est(v){ return fmt(Math.round(v*0.6/1000)*1000); }
+
+  function sync(sl, aEl, sEl){
+    const v = +sl.value;
+    const p = (v-10000)/(100000-10000)*100;
+    sl.style.background = `linear-gradient(to right,#c0281a 0%,#c0281a ${p}%,#ddd ${p}%,#ddd 100%)`;
+    aEl.textContent = fmt(v);
+    sEl.textContent = 'Estimated savings: '+est(v);
+  }
+
+  [
+    ['sl1','amt1','save1'],
+    ['sl2','amt2','save2'],
+  ].forEach(([sid,aid,svid])=>{
+    const sl=document.getElementById(sid),
+          a=document.getElementById(aid),
+          s=document.getElementById(svid);
+    sync(sl,a,s);
+    sl.addEventListener('input',()=>sync(sl,a,s));
+  });
+})();
+</script>
+</body>
+</html>
