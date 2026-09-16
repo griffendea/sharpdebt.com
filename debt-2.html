@@ -751,16 +751,16 @@ footer em { font-style: italic; font-size: 11px; }
 
   <p class="body-p">The results are shocking: People with $25,000 in debt are walking away paying just $8,000. Those with $50,000+ in debt are saving over $30,000.</p>
 
-  <p class="body-p">Imagine what you could do with that money back in your pocket: <strong>Finally retire comfortably. Take that dream vacation. Help your grandchildren. Stop the endless cycle of minimum payments that go nowhere.</strong> With interest rates at all-time highs (some over 29%!), every month you wait costs you hundreds more. But <a href="https://path.godebthelp.com/click" class="rl">checking if you qualify takes 2 minutes and costs absolutely nothing.</a></p>
+  <p class="body-p">Imagine what you could do with that money back in your pocket: <strong>Finally retire comfortably. Take that dream vacation. Help your grandchildren. Stop the endless cycle of minimum payments that go nowhere.</strong> With interest rates at all-time highs (some over 29%!), every month you wait costs you hundreds more. But <a href="https://path.sharpdebt.com/click" class="rl">checking if you qualify takes 2 minutes and costs absolutely nothing.</a></p>
 
   <div class="callout">
     <div class="callout-label">⏱&ensp;Time-Sensitive</div>
     <p>This program has income and debt amount requirements. If you have <strong>$20,000 or more</strong> in unsecured debt (credit cards, personal loans, medical bills), you need to check your eligibility before these spots fill up. This program could get pulled at any time.</p>
   </div>
 
-  <p class="body-p"><strong>URGENT — READ THIS:</strong> Skeptical? We understand. Most people with $40,000+ in debt think this sounds "too good to be true." But here's the reality: <strong>Over 1 million Americans have already used this program to eliminate $19+ BILLION in debt since 2002.</strong> This isn't magic — it's a legal negotiation process backed by the American Association for Debt Resolution. Your creditors would rather get some money than none. And there's <strong>ZERO COST to check</strong> and <strong>ZERO RISK</strong> to <a href="https://path.godebthelp.com/click" class="rl">see if you qualify in the next 60 seconds.</a> What do you have to lose besides your debt?</p>
+  <p class="body-p"><strong>URGENT — READ THIS:</strong> Skeptical? We understand. Most people with $40,000+ in debt think this sounds "too good to be true." But here's the reality: <strong>Over 1 million Americans have already used this program to eliminate $19+ BILLION in debt since 2002.</strong> This isn't magic — it's a legal negotiation process backed by the American Association for Debt Resolution. Your creditors would rather get some money than none. And there's <strong>ZERO COST to check</strong> and <strong>ZERO RISK</strong> to <a href="https://path.sharpdebt.com/click" class="rl">see if you qualify in the next 60 seconds.</a> What do you have to lose besides your debt?</p>
 
-  <a href="https://path.godebthelp.com/click" class="cta">YES! Show Me How Much I Can Save
+  <a href="https://path.sharpdebt.com/click" class="cta">YES! Show Me How Much I Can Save
     <span class="sub">Free 60-Second Check →</span>
   </a>
 
@@ -790,7 +790,7 @@ footer em { font-style: italic; font-size: 11px; }
       <div class="range-labels"><span>$10,000</span><span>$100,000+</span></div>
     </div>
 
-    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:6px;">Check Your Eligibility — It's Free!
+    <a href="https://path.sharpdebt.com/click" class="cta" style="margin-top:6px;">Check Your Eligibility — It's Free!
       <span class="sub">Free &nbsp;•&nbsp; No Signup Required &nbsp;•&nbsp; Confidential &nbsp;•&nbsp; Your Creditors Won't Be Notified</span>
     </a>
 
@@ -811,7 +811,7 @@ footer em { font-style: italic; font-size: 11px; }
 
     <div class="more-bar">💰 The MORE debt you have, the MORE you can eliminate — even $50,000–$100,000+!</div>
 
-    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:10px;">YES! Show Me How Much I Can Save
+    <a href="https://path.sharpdebt.com/click" class="cta" style="margin-top:10px;">YES! Show Me How Much I Can Save
       <span class="sub">Free 60-Second Check →</span>
     </a>
   </div>
@@ -875,7 +875,7 @@ footer em { font-style: italic; font-size: 11px; }
       <div class="range-labels"><span>$10,000</span><span>$100,000+</span></div>
     </div>
 
-    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:6px;">Check Your Eligibility — It's Free!
+    <a href="https://path.sharpdebt.com/click" class="cta" style="margin-top:6px;">Check Your Eligibility — It's Free!
       <span class="sub">Free &nbsp;•&nbsp; No Signup Required &nbsp;•&nbsp; Confidential &nbsp;•&nbsp; Your Creditors Won't Be Notified</span>
     </a>
 
@@ -896,7 +896,7 @@ footer em { font-style: italic; font-size: 11px; }
 
     <div class="more-bar">💰 The MORE debt you have, the MORE you can eliminate — even $50,000–$100,000+!</div>
 
-    <a href="https://path.godebthelp.com/click" class="cta" style="margin-top:10px;">YES! Show Me How Much I Can Save
+    <a href="https://path.sharpdebt.com/click" class="cta" style="margin-top:10px;">YES! Show Me How Much I Can Save
       <span class="sub">Free 60-Second Check →</span>
     </a>
   </div>
@@ -911,7 +911,7 @@ footer em { font-style: italic; font-size: 11px; }
 
 <!-- STICKY BAR -->
 <div class="sticky">
-  <a href="https://path.godebthelp.com/click">See How Much You Could Save (60 sec) →</a>
+  <a href="https://path.sharpdebt.com/click">See How Much You Could Save (60 sec) →</a>
 </div>
 
 <script>
@@ -936,6 +936,26 @@ footer em { font-style: italic; font-size: 11px; }
           s=document.getElementById(svid);
     sync(sl,a,s);
     sl.addEventListener('input',()=>sync(sl,a,s));
+  });
+})();
+
+// Forward tracking params (clickid, sub1-sub12, utm_*, etc.) from the
+// lander's URL onto every CTA offer link, so RedTrack can attribute the
+// click on the offer side instead of seeing an empty clickid.
+(function forwardTrackingParams() {
+  const incomingParams = new URLSearchParams(window.location.search);
+  if ([...incomingParams].length === 0) return;
+
+  document.querySelectorAll('a.cta[href], a.rl[href], .sticky a[href]').forEach(link => {
+    try {
+      const url = new URL(link.getAttribute('href'), window.location.href);
+      incomingParams.forEach((value, key) => {
+        url.searchParams.set(key, value);
+      });
+      link.setAttribute('href', url.toString());
+    } catch (e) {
+      // leave the link untouched if it's not a valid absolute URL
+    }
   });
 })();
 </script>
